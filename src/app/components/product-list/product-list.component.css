@@ -1,0 +1,55 @@
+.product-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+
+  h3 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+
+    .counter {
+      background: #eee;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-left: 10px;
+      font-size: 14px;
+    }
+  }
+
+  .empty {
+    color: #666;
+    font-style: italic;
+  }
+
+  .product-card {
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 10px;
+
+    .product-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+
+      .discount-badge {
+        background: #ff6b6b;
+        color: white;
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        margin-left: 5px;
+      }
+    }
+
+    .product-details {
+      display: flex;
+      justify-content: space-between;
+      color: #666;
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+<div class="product-section">
+  <h3>Productos En Descuento <span class="counter">{{ productService.discountCount$ | async }}</span></h3>
+
+  <div *ngIf="(productService.discountedProducts$ | async)?.length === 0" class="empty">
+    No hay productos con descuento.
+  </div>
+
+  <div class="product-card" *ngFor="let product of productService.discountedProducts$ | async">
+    <div class="product-name">
+      {{ product.Nombre }}
+      <span class="discount-badge">Descuento</span>
+    </div>
+    <div class="product-details">
+      <span>Precio: ${{ product.Precio }}</span>
+      <span>Código: {{ product.Codigo }}</span>
+    </div>
+  </div>
+</div>

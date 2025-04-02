@@ -1,0 +1,18 @@
+<div class="product-section">
+  <h3>Productos Recien Agregados</h3>
+
+  <div *ngIf="(recentProducts$ | async)?.length === 0" class="empty">
+    No hay productos recientes.
+  </div>
+
+  <div class="product-card" *ngFor="let product of recentProducts$ | async">
+    <div class="product-name">
+      {{ product.Nombre }}
+      <span class="discount-badge" *ngIf="product.Descuento">Descuento</span>
+    </div>
+    <div class="product-details">
+      <span>Precio: ${{ product.Precio }}</span>
+      <span>Código: {{ product.Codigo }}</span>
+    </div>
+  </div>
+</div>
